@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Talk Me Чат</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+<style>
+    * {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        color: #4a5568;
+    }
+
+    .block-notable {
+        background: #D9EDF7;
+        border-top: 1px solid #CCE4E9;
+        border-bottom: 1px solid #CCE4E9;
+        padding: 5rem 0;
+    }
+
+    .cta {
+        background: #FFFFF0 !important;
+    }
+
+    .block-odd {
+        background: #EBF8FF;
+        border-top: 1px solid #E5EAED;
+        border-bottom: 1px solid #E5EAED;
+        padding: 5rem 0;
+    }
+
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @media (min-width: 576px) {
+        .container {
+            max-width: 540px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .container {
+            max-width: 720px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .container {
+            max-width: 960px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .container {
+            max-width: 1140px;
+        }
+    }
+
+    .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @media (min-width: 576px) {
+        .container, .container-sm {
+            max-width: 540px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .container, .container-sm, .container-md {
+            max-width: 720px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .container, .container-sm, .container-md, .container-lg {
+            max-width: 960px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .container, .container-sm, .container-md, .container-lg, .container-xl {
+            max-width: 1140px;
+        }
+    }
+
+    .btn-primary {
+        background: #EEE318;
+        color: #373A3C !important;
+        font-weight: 700;
+        border: 1px solid #BEB502;
+        cursor: pointer;
+    }
+
+    .link-box {
+        display: flex;
+        flex-direction: column;
+        align-content: space-around;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .nav-box {
+        display: flex;
+        flex-direction: row;
+        align-content: flex-start;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .ben-box {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<main>
+    <nav class="container mx-auto lg:mx-0 grid grid-cols-1 lg:grid-cols-3 p-4 mb-12">
+        <div class="text-left none lg:block w-auto"></div>
+        <div class="nav-box gap-4 w-auto w-auto lg:w-full px-12 md:px-24 lg:px-0">
+            <a href="#home" class="text-gray-900 font-semibold">Главная</a>
+            <a href="#start" class="text-gray-400 font-semibold">Как начать</a>
+            <a href="#futures" class="text-gray-400 font-semibold">Функции</a>
+        </div>
+        <div class="text-right none lg:block w-auto"></div>
+    </nav>
+
+    <div class="container text-center col-md-10 mx-auto" id="home">
+        <h1 class="text-5xl font-bold text-black mb-2">Общайся без стеснения и оков,<br>общайся анонимно</h1>
+        <p class="pt-2 pb-4 text-lg mb-2">Общайся в анонимном чате прямо в Telegram</p>
+        <div class="link-box mb-12">
+            <a class="btn btn-primary px-4 py-2 d-inline-block" href="https://t.me/anonchatme_bot">Начать басплатно</a>
+            <small class="text-capitalize mt-2 text-gray-500">Вы можете стать VIP бесплатно</small>
+        </div>
+
+        <img src="./src/Free_MacBook_Pro_1.png" alt="" class="text-center w-full object-contain">
+        <p class="text-center font-semibold mb-12 tracking-wide text-gray-500 mx-12 lg:mx-0">Присоединяйся к более чем 200+ пользователей, выбравших нас</p>
+    </div>
+
+    <div class="benefits block-odd" id="start">
+        <div class="container text-center col-md-10 mx-auto">
+            <div class="text-center mx-auto">
+                <h2 class="text-4xl font-bold text-black">Находи новых друзей, знакомся или просто проводи время приятно</h2>
+                <p class="pt-2 pb-4 text-md">Людям проще начать общаться со случайным собеседником в чате, чем с незнакомцем в жизни</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 m-6 gap-12">
+                <div class="ben-box">
+                    <img src="./src/drawing-music.png" class="text-center object-contain w-1/2 mb-4 h-48">
+                    <h4 class="text-lg font-bold text-black mb-2">Знакомся без комплексов</h4>
+                    <p>Тебя все равно никто не узнает, пока ты сам не решишь поделиться своими контактами</p>
+                </div>
+                <div class="ben-box">
+                    <img src="./src/drawing-coffee.png" class="text-center object-contain w-1/2 mb-4 h-48">
+                    <h4 class="text-lg font-bold text-black mb-2">Делись переживаниями</h4>
+                    <p>Ваш диалог с собеседником не храниться на наших серверах, только ты и он видит, что вы пишите друг другу</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center col-md-10 mx-auto my-24" id="futures">
+        <div class="text-center mx-auto">
+            <h2 class="text-4xl font-bold text-black">Фильтруй собеседников</h2>
+        </div>
+
+        <div class="grid gap-12 md:grid-cols-2 md:grid-rows-4 lg:grid-cols-4 lg:grid-rows-2 my-12">
+            <div class="flex gap-4 grid-cols-2">
+                <div class="p-2 w-12 h-12">
+                    <img src="./src/icon-idea.png" alt="" class="w-full h-full object-contain	">
+                </div>
+                <div class="text-left w-full">
+                    <h4 class="text-black text-md font-bold">Испытай удачу</h4>
+                    <p  class="text-sm text-regular text-gray-400">Ты можешь найти абсолютно любого собеседника</p>
+                </div>
+            </div>
+
+            <div class="flex gap-4 grid-cols-2">
+                <div class="p-2 w-12 h-12">
+                    <img src="./src/icon-settings.png" alt="" class="w-full h-full object-contain	">
+                </div>
+                <div class="text-left w-full">
+                    <h4 class="text-black text-md font-bold">Нацелься на судьбу</h4>
+                    <p  class="text-sm text-regular text-gray-400">Укажи параметры собеседника и мы найдем тебе подходящего</p>
+                </div>
+            </div>
+
+            <div class="flex gap-4 grid-cols-2">
+                <div class="p-2 w-12 h-12">
+                    <img src="./src/icon-user.png" alt="" class="w-full h-full object-contain	">
+                </div>
+                <div class="text-left w-full">
+                    <h4 class="text-black text-md font-bold">Опереди время</h4>
+                    <p  class="text-sm text-regular text-gray-400">Используй ВИП статус, чтобы быть первым в очереди</p>
+                </div>
+            </div>
+
+            <div class="flex gap-4 grid-cols-2">
+                <div class="p-2 w-12 h-12">
+                    <img src="./src/icon-idea.png" alt="" class="w-full h-full object-contain	">
+                </div>
+                <div class="text-left w-full">
+                    <h4 class="text-black text-md font-bold">Обменивайся голосовыми</h4>
+                    <p  class="text-sm text-regular text-gray-400">Вы можете отправлять голосовые сообщения пользователям</p>
+                </div>
+            </div>
+
+            <div class="flex gap-4 grid-cols-2">
+                <div class="p-2 w-12 h-12">
+                    <img src="./src/icon-settings.png" alt="" class="w-full h-full object-contain	">
+                </div>
+                <div class="text-left w-full">
+                    <h4 class="text-black text-md font-bold">Обменивайся фоточками</h4>
+                    <p  class="text-sm text-regular text-gray-400">Отправляй свои красивые фотки собеседнику, он не узнает твоих личных данных</p>
+                </div>
+            </div>
+
+            <div class="flex gap-4 grid-cols-2">
+                <div class="p-2 w-12 h-12">
+                    <img src="./src/icon-user.png" alt="" class="w-full h-full object-contain	">
+                </div>
+                <div class="text-left w-full">
+                    <h4 class="text-black text-md font-bold">Полная приватность</h4>
+                    <p  class="text-sm text-regular text-gray-400">Мы не храним ваши диалоги у себя на серверах. Только ты и собеседник видят сообщения</p>
+                </div>
+            </div>
+
+            <div class="flex gap-4 grid-cols-2">
+                <div class="p-2 w-12 h-12">
+                    <img src="./src/icon-idea.png" alt="" class="w-full h-full object-contain	">
+                </div>
+                <div class="text-left w-full">
+                    <h4 class="text-black text-md font-bold">Эксперементируй</h4>
+                    <p  class="text-sm text-regular text-gray-400">Не бойся писать вульгарные или глупые вещи, об этом знаешь только ты</p>
+                </div>
+            </div>
+
+            <div class="flex gap-4 grid-cols-2">
+                <div class="p-2 w-12 h-12">
+                    <img src="./src/icon-user.png" alt="" class="w-full h-full object-contain	">
+                </div>
+                <div class="text-left w-full">
+                    <h4 class="text-black text-md font-bold">Веселись</h4>
+                    <p  class="text-sm text-regular text-gray-400">Пранкуй собеседника, устраивай безобитные подстави и просто весело проведи время</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta block-notable pt-4">
+        <div class="text-center mx-auto">
+            <h2 class="text-4xl font-bold text-black">Ну что, начинаем?</h2>
+            <p class="pt-2 pb-4 text-md mb-12">Давай перейдем от слов к делу, десятки собеседников ждут тебя</p>
+            <a class="btn btn-primary px-4 py-2 d-inline-block" href="https://t.me/anonchatme_bot">Начать басплатно</a>
+
+        </div>
+    </div>
+
+</main>
+</body>
+</html>
