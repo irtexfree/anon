@@ -2,9 +2,175 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Talk Me Чат</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-$END$
+
+<style>
+    * {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        color: #4a5568;
+    }
+
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @media (min-width: 576px) {
+        .container {
+            max-width: 540px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .container {
+            max-width: 720px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .container {
+            max-width: 960px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .container {
+            max-width: 1140px;
+        }
+    }
+
+    .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @media (min-width: 576px) {
+        .container, .container-sm {
+            max-width: 540px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .container, .container-sm, .container-md {
+            max-width: 720px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .container, .container-sm, .container-md, .container-lg {
+            max-width: 960px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .container, .container-sm, .container-md, .container-lg, .container-xl {
+            max-width: 1140px;
+        }
+    }
+</style>
+
+<div class="container py-4">
+    <div class="row d-flex flex-col d-lg-flex-row fade-in fade-in-second mb-5 mt-5" id="pricing">
+        <!-- Start Pricing Option-->
+        <div class="pricing-content__option col-12 col-lg-4 mb-2 mt-4">
+            <div class="border border-gray-300 rounded p-4 px-2 text-center ">
+                <div class="text-center">
+                    <h3>Standard</h3>
+                    <div class="relative d-flex justify-content-center mt-5 mb-3">
+                        <span class="dollar">$</span>
+                        <span class="price">19</span>
+                    </div>
+                    <div class="billing-time mb-4">Billed per month</div>
+                    <p class="">Explain biggest difference of this plan here</p>
+                </div>
+                <div class="text-left">
+                    <ul class="usps">
+                        <li class="text-gray-800  text-sm py-1 ">Most important feature</li>
+                        <li class="text-gray-800  text-sm py-1">Another important features</li>
+                        <li class="text-gray-800  text-sm py-1">Next feature here</li>
+                        <li class="text-gray-800  text-sm py-1">Another, less important feature</li>
+                        <li class="text-gray-800  text-sm py-1">Last feature here</li>
+                    </ul>
+                </div>
+                <div class="my-4">
+                    <a href="#" class="btn btn-ghost">Start free trial now</a>
+                </div>
+            </div>
+        </div>
+        <!-- End Pricing Option-->
+        <!-- Start Pricing Option-->
+        <div class="pricing-content__option primary-option col-12 col-lg-4 mb-2">
+            <div class="border border-gray-300 rounded p-4 px-2 text-center ">
+                <div class="most-popular">
+                    Most Popular
+                </div>
+                <div class="text-center mt-4">
+                    <h3>Premium</h3>
+                    <div class="relative d-flex justify-content-center mt-5 mb-4">
+                        <span class="dollar">$</span>
+                        <span class="price">29</span>
+                    </div>
+                    <div class="billing-time mb-4">Billed per month</div>
+                    <p class="">This is the plan you want to sell most</p>
+                </div>
+                <div class="text-left">
+                    <ul class="usps">
+                        <li class="text-gray-800  text-sm py-1 font-weight-bold">All features from standard</li>
+                        <li class="text-gray-800  text-sm py-1 ">Most important feature</li>
+                        <li class="text-gray-800  text-sm py-1">Another important features</li>
+                        <li class="text-gray-800  text-sm py-1">Next feature here</li>
+                        <li class="text-gray-800  text-sm py-1">Another, less important feature</li>
+                        <li class="text-gray-800  text-sm py-1">Last feature here</li>
+                    </ul>
+                </div>
+                <div class="my-4">
+                    <a href="#" class="btn btn-primary">Start free trial now</a>
+                </div>
+            </div>
+        </div>
+        <!-- End Pricing Option-->
+        <!-- Start Pricing Option-->
+        <div class="pricing-content__option col-12 col-lg-4 mb-2 mt-4">
+            <div class="border border-gray-300 rounded p-4 px-2 text-center ">
+                <div class="text-center">
+                    <h3>Decoy</h3>
+                    <div class="relative d-flex justify-content-center mt-5 mb-3">
+                        <span class="dollar">$</span>
+                        <span class="price">99</span>
+                    </div>
+                    <div class="billing-time mb-4">Billed per month</div>
+                    <p class="">Make this plan super expensive, so your middle plan looks cheaper</p>
+                </div>
+                <div class="text-left">
+                    <ul class="usps">
+                        <li class="text-gray-800  text-sm py-1 font-weight-bold">All features from standard</li>
+                        <li class="text-gray-800  text-sm py-1 ">Most important feature</li>
+                        <li class="text-gray-800  text-sm py-1">Another important features</li>
+                        <li class="text-gray-800  text-sm py-1">Next feature here</li>
+                        <li class="text-gray-800  text-sm py-1">Another, less important feature</li>
+                    </ul>
+                </div>
+                <div class="my-4">
+                    <a href="#" class="btn btn-ghost">Start free trial now</a>
+                </div>
+            </div>
+        </div>
+        <!-- End Pricing Option-->
+    </div>
+</div>
 </body>
 </html>
