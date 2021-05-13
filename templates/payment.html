@@ -6,171 +6,174 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/main.css">
+    <link rel="shortcut icon" href="./src/favicon.ico" type="image/x-icon">
 </head>
-<body>
+<body x-data="{modal: false, type: 0}">
+    <nav class="container mx-auto lg:mx-0 grid grid-cols-1 lg:grid-cols-3 p-4 mb-12">
+        <div class="text-left none lg:block w-auto"></div>
+        <div class="nav-box gap-4 w-auto w-auto lg:w-full px-12 md:px-24 lg:px-0">
+            <a href="/#home" class="text-gray-400 font-semibold">Главная</a>
+            <a href="/#start" class="text-gray-400 font-semibold">Как начать</a>
+            <a href="/#futures" class="text-gray-400 font-semibold">Функции</a>
+            <a href="#" class="text-gray-900 font-semibold">VIP</a>
+        </div>
+        <div class="text-right none lg:block w-auto"></div>
+    </nav>
 
-<style>
-    * {
-        font-family: 'Poppins', sans-serif;
-    }
+    <div class="container py-4 mx-auto my-24">
+        <div class="text-center mx-auto">
+            <h2 class="text-4xl font-bold text-black">Получи безграничный доступ к боту</h2>
+        </div>
 
-    body {
-        color: #4a5568;
-    }
-
-    .container {
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    @media (min-width: 576px) {
-        .container {
-            max-width: 540px;
-        }
-    }
-
-    @media (min-width: 768px) {
-        .container {
-            max-width: 720px;
-        }
-    }
-
-    @media (min-width: 992px) {
-        .container {
-            max-width: 960px;
-        }
-    }
-
-    @media (min-width: 1200px) {
-        .container {
-            max-width: 1140px;
-        }
-    }
-
-    .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    @media (min-width: 576px) {
-        .container, .container-sm {
-            max-width: 540px;
-        }
-    }
-
-    @media (min-width: 768px) {
-        .container, .container-sm, .container-md {
-            max-width: 720px;
-        }
-    }
-
-    @media (min-width: 992px) {
-        .container, .container-sm, .container-md, .container-lg {
-            max-width: 960px;
-        }
-    }
-
-    @media (min-width: 1200px) {
-        .container, .container-sm, .container-md, .container-lg, .container-xl {
-            max-width: 1140px;
-        }
-    }
-</style>
-
-<div class="container py-4">
-    <div class="row d-flex flex-col d-lg-flex-row fade-in fade-in-second mb-5 mt-5" id="pricing">
-        <!-- Start Pricing Option-->
-        <div class="pricing-content__option col-12 col-lg-4 mb-2 mt-4">
-            <div class="border border-gray-300 rounded p-4 px-2 text-center ">
+        <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 my-12">
+            <div class="border border-gray-300 rounded px-4 py-6 text-center">
                 <div class="text-center">
-                    <h3>Standard</h3>
-                    <div class="relative d-flex justify-content-center mt-5 mb-3">
-                        <span class="dollar">$</span>
-                        <span class="price">19</span>
+                    <h3 class="mb-12">BOSS</h3>
+                    <div class="">
+                        <span class="dollar">РУБ</span>
+                        <span class="price">599</span>
                     </div>
-                    <div class="billing-time mb-4">Billed per month</div>
-                    <p class="">Explain biggest difference of this plan here</p>
-                </div>
-                <div class="text-left">
-                    <ul class="usps">
-                        <li class="text-gray-800  text-sm py-1 ">Most important feature</li>
-                        <li class="text-gray-800  text-sm py-1">Another important features</li>
-                        <li class="text-gray-800  text-sm py-1">Next feature here</li>
-                        <li class="text-gray-800  text-sm py-1">Another, less important feature</li>
-                        <li class="text-gray-800  text-sm py-1">Last feature here</li>
-                    </ul>
-                </div>
-                <div class="my-4">
-                    <a href="#" class="btn btn-ghost">Start free trial now</a>
+                    <div class="billing-time mb-4 mt-2">Цена за час</div>
+                    <div class="text-left text-sm p-4 gap-3 grid grid-cols-1">
+                        <p class="">Не жди очередь</p>
+                        <p class="">Смотри фото без ограничений</p>
+                        <p class="">Участвуй в программах лояльности</p>
+                    </div>
+
+                    <a href="#" class="btn btn-ghost px-4 py-2 block w-full" @click="modal = true; type = 1;">Получить сейчас</a>
                 </div>
             </div>
-        </div>
-        <!-- End Pricing Option-->
-        <!-- Start Pricing Option-->
-        <div class="pricing-content__option primary-option col-12 col-lg-4 mb-2">
-            <div class="border border-gray-300 rounded p-4 px-2 text-center ">
-                <div class="most-popular">
-                    Most Popular
-                </div>
-                <div class="text-center mt-4">
-                    <h3>Premium</h3>
-                    <div class="relative d-flex justify-content-center mt-5 mb-4">
-                        <span class="dollar">$</span>
-                        <span class="price">29</span>
-                    </div>
-                    <div class="billing-time mb-4">Billed per month</div>
-                    <p class="">This is the plan you want to sell most</p>
-                </div>
-                <div class="text-left">
-                    <ul class="usps">
-                        <li class="text-gray-800  text-sm py-1 font-weight-bold">All features from standard</li>
-                        <li class="text-gray-800  text-sm py-1 ">Most important feature</li>
-                        <li class="text-gray-800  text-sm py-1">Another important features</li>
-                        <li class="text-gray-800  text-sm py-1">Next feature here</li>
-                        <li class="text-gray-800  text-sm py-1">Another, less important feature</li>
-                        <li class="text-gray-800  text-sm py-1">Last feature here</li>
-                    </ul>
-                </div>
-                <div class="my-4">
-                    <a href="#" class="btn btn-primary">Start free trial now</a>
-                </div>
-            </div>
-        </div>
-        <!-- End Pricing Option-->
-        <!-- Start Pricing Option-->
-        <div class="pricing-content__option col-12 col-lg-4 mb-2 mt-4">
-            <div class="border border-gray-300 rounded p-4 px-2 text-center ">
+            <div class="border border-gray-300 rounded px-4 py-6 text-center shadow-spec">
                 <div class="text-center">
-                    <h3>Decoy</h3>
-                    <div class="relative d-flex justify-content-center mt-5 mb-3">
-                        <span class="dollar">$</span>
-                        <span class="price">99</span>
+                    <h3 class="mb-12">Первый + Просмотр фото</h3>
+                    <div class="">
+                        <span class="dollar">РУБ</span>
+                        <span class="price">300</span>
                     </div>
-                    <div class="billing-time mb-4">Billed per month</div>
-                    <p class="">Make this plan super expensive, so your middle plan looks cheaper</p>
+                    <div class="billing-time mb-4 mt-2">Цена за час</div>
+                    <div class="text-left text-sm p-4 gap-3 grid grid-cols-1">
+                        <p class="">Не жди очередь</p>
+                        <p class="">Смотри фото без ограничений</p>
+                        <p class="line-through">Участвуй в программах лояльности</p>
+                    </div>
+
+                    <a href="#" class="btn-primary px-4 py-2 block w-full" @click="modal = true; type = 2;">Получить сейчас</a>
                 </div>
-                <div class="text-left">
-                    <ul class="usps">
-                        <li class="text-gray-800  text-sm py-1 font-weight-bold">All features from standard</li>
-                        <li class="text-gray-800  text-sm py-1 ">Most important feature</li>
-                        <li class="text-gray-800  text-sm py-1">Another important features</li>
-                        <li class="text-gray-800  text-sm py-1">Next feature here</li>
-                        <li class="text-gray-800  text-sm py-1">Another, less important feature</li>
-                    </ul>
+            </div>
+            <div class="border border-gray-300 rounded px-4 py-6 text-center">
+                <div class="text-center">
+                    <h3 class="mb-12">Просмотр фото</h3>
+                    <div class="">
+                        <span class="dollar">РУБ</span>
+                        <span class="price">150</span>
+                    </div>
+                    <div class="billing-time mb-4 mt-2">Цена за час</div>
+                    <div class="text-left text-sm p-4 gap-3 grid grid-cols-1">
+                        <p class="">Смотри фото без ограничений</p>
+                        <p class="line-through">Не жди очередь</p>
+                        <p class="line-through">Участвуй в программах лояльности</p>
+                    </div>
+
+                    <a href="#" class="btn btn-ghost px-4 py-2 block w-full" @click="modal = true; type = 3;">Получить сейчас</a>
                 </div>
-                <div class="my-4">
-                    <a href="#" class="btn btn-ghost">Start free trial now</a>
+            </div>
+            <div class="border border-gray-300 rounded px-4 py-6 text-center">
+                <div class="text-center">
+                    <h3 class="mb-12">Первый в очереди</h3>
+                    <div class="">
+                        <span class="dollar">РУБ</span>
+                        <span class="price">150</span>
+                    </div>
+                    <div class="billing-time mb-4 mt-2">Цена за час</div>
+                    <div class="text-left text-sm p-4 gap-3 grid grid-cols-1">
+                        <p class="">Не жди очередь</p>
+                        <p class="line-through">Смотри фото без ограничений</p>
+                        <p class="line-through">Участвуй в программах лояльности</p>
+                    </div>
+
+                    <a href="#" class="btn btn-ghost px-4 py-2 block w-full" @click="modal = true; type = 4;">Получить сейчас</a>
                 </div>
             </div>
         </div>
-        <!-- End Pricing Option-->
     </div>
-</div>
+
+    <div class="cta-between block-odd py-8">
+        <div class="container">
+            <div class="row d-flex flex-column flex-lg-row justify-content-center align-content-center align-items-center text-center text-lg-left">
+                <div class="px-4 d-flex flex-column align-content-center my-2 my-md-0">
+                    <h4 class="pb-0 mb-2 mb-md-2 text-2xl">Попробуй VIP бесплатно</h4>
+                    <p class="mb-0 font-regular text-md">Попробуй VIP бесплатно, введи команду /vip-free</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-4 mx-auto my-24">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-2">
+            <div>
+                <img src="../src/features-drawing-moonlanding.png" alt="" class="w-full px-12">
+            </div>
+            <div>
+                <h2 class="text-3xl font-bold text-black mb-4">Безграничные возможности от тебя в паре кликов</h2>
+                <ul>
+                    <li class="text-color-primary py-1 opus">
+                        <img src="../src/check.png" alt="" class="h-4">
+                        <span>Не жди, пока мучительная очередь дойдет до тебя</span>
+                    </li>
+                    <li class="text-color-primary py-1 opus">
+                        <img src="../src/check.png" alt="" class="h-4">
+                        <span>Смотри фотографии без органичений</span>
+                    </li>
+                    <li class="text-color-primary py-1 opus">
+                        <img src="../src/check.png" alt="" class="h-4">
+                        <span>Участвуй в наших программах лояльности</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true" x-show="modal">
+        <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+
+            <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+            <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                    <div class="sm:flex sm:items-start">
+
+                        <div class="mt-3 text-center sm:mt-0 sm:text-left w-full">
+                            <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
+                                Покупка привилегии
+                            </h3>
+                            <div class="mt-2 w-full">
+                                <p class="text-sm text-gray-500 mb-6">Отправь боту команду /me и получи свой UID, скопируй его и вставь в поле ниже, чтобы получить ссылку на оплату привилегии</p>
+
+                                <div class="input-box">
+                                    <label class="text-body text-sm">Ваш UID</label>
+                                    <input type="text" class="bg-white border border-gray-400 rounded shadow-inner px-4 py-2 text-sm text-gray-700 w-full input" placeholder="00000000000">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                    <button @click="modal = false" type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-yellow-600 text-base font-medium text-white hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 sm:ml-3 sm:w-auto sm:text-sm">
+                        Выслать ссылку
+                    </button>
+                    <button @click="modal = false" type="button" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
+                        Отмена
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+
 </body>
 </html>

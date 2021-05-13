@@ -19,4 +19,8 @@ def privacy_policy():
 def handle_privacy():
     return render_template('handle_privacy.html')
 
+@app.route("/payment")
+def payment():
+    return render_template('payment.html')
+
 app.run(host="0.0.0.0", port=8081)

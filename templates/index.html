@@ -6,139 +6,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/main.css">
+    <link rel="shortcut icon" href="./src/favicon.ico" type="image/x-icon">
 </head>
 <body>
-<style>
-    * {
-        font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-        color: #4a5568;
-    }
-
-    .block-notable {
-        background: #D9EDF7;
-        border-top: 1px solid #CCE4E9;
-        border-bottom: 1px solid #CCE4E9;
-    }
-
-    .cta {
-        background: #FFFFF0 !important;
-    }
-
-    .block-odd {
-        background: #EBF8FF;
-        border-top: 1px solid #E5EAED;
-        border-bottom: 1px solid #E5EAED;
-        padding: 5rem 0;
-    }
-
-    .container {
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    @media (min-width: 576px) {
-        .container {
-            max-width: 540px;
-        }
-    }
-
-    @media (min-width: 768px) {
-        .container {
-            max-width: 720px;
-        }
-    }
-
-    @media (min-width: 992px) {
-        .container {
-            max-width: 960px;
-        }
-    }
-
-    @media (min-width: 1200px) {
-        .container {
-            max-width: 1140px;
-        }
-    }
-
-    .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    @media (min-width: 576px) {
-        .container, .container-sm {
-            max-width: 540px;
-        }
-    }
-
-    @media (min-width: 768px) {
-        .container, .container-sm, .container-md {
-            max-width: 720px;
-        }
-    }
-
-    @media (min-width: 992px) {
-        .container, .container-sm, .container-md, .container-lg {
-            max-width: 960px;
-        }
-    }
-
-    @media (min-width: 1200px) {
-        .container, .container-sm, .container-md, .container-lg, .container-xl {
-            max-width: 1140px;
-        }
-    }
-
-    .btn-primary {
-        background: #EEE318;
-        color: #373A3C !important;
-        font-weight: 700;
-        border: 1px solid #BEB502;
-        cursor: pointer;
-    }
-
-    .link-box {
-        display: flex;
-        flex-direction: column;
-        align-content: space-around;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .nav-box {
-        display: flex;
-        flex-direction: row;
-        align-content: flex-start;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .ben-box {
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .law-box {
-        gap: 2em;
-        display: flex;
-        flex-wrap: wrap;
-        align-content: flex-start;
-        justify-content: center;
-        align-items: center;
-    }
-</style>
 <main>
     <nav class="container mx-auto lg:mx-0 grid grid-cols-1 lg:grid-cols-3 p-4 mb-12">
         <div class="text-left none lg:block w-auto"></div>
@@ -146,6 +17,7 @@
             <a href="#home" class="text-gray-900 font-semibold">Главная</a>
             <a href="#start" class="text-gray-400 font-semibold">Как начать</a>
             <a href="#futures" class="text-gray-400 font-semibold">Функции</a>
+            <a href="/payment" class="text-gray-400 font-semibold">VIP</a>
         </div>
         <div class="text-right none lg:block w-auto"></div>
     </nav>
@@ -154,7 +26,7 @@
         <h1 class="text-5xl font-bold text-black mb-2">Общайся без стеснения и оков,<br>общайся анонимно</h1>
         <p class="pt-2 pb-4 text-lg mb-2">Общайся в анонимном чате прямо в Telegram</p>
         <div class="link-box mb-12">
-            <a class="btn btn-primary px-4 py-2 d-inline-block" href="https://t.me/anonchatme_bot">Начать басплатно</a>
+            <a class="btn-primary px-4 py-2 d-inline-block" href="https://t.me/anonchatme_bot">Начать басплатно</a>
             <small class="text-capitalize mt-2 text-gray-500">Вы можете стать VIP бесплатно</small>
         </div>
 
@@ -276,7 +148,7 @@
         <div class="text-center mx-auto mb-20">
             <h2 class="text-4xl font-bold text-black">Ну что, начинаем?</h2>
             <p class="pt-2 pb-4 text-md mb-12">Давай перейдем от слов к делу, десятки собеседников ждут тебя</p>
-            <a class="btn btn-primary px-4 py-2 d-inline-block" href="https://t.me/anonchatme_bot">Начать басплатно</a>
+            <a class="btn-primary px-4 py-2 d-inline-block" href="https://t.me/anonchatme_bot">Начать басплатно</a>
         </div>
         <div class="law-box pb-4 text-center opacity-50">
             <a href="#">ИНН: 682669989361</a>
